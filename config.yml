@@ -132,16 +132,15 @@ apache_vhosts:
     extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
 
  ## virtual hosts added for projects 
-    
+  # drupal 8 example (note addition of '/web')
   - servername: "epamdu.{{ drupal_domain }}"
     serveralias: "www.epamdu.{{ drupal_domain }}"
-   # documentroot: "{{ drupal_core_path }}/epamdu/web"
     documentroot: "{{drupal_project_setup_dir}}/epamdu/web"
     extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
     
+  # drupal 7 example (make sure the root directory contains 'index.php' or 'index.html')
   - servername: "smokefree.{{ drupal_domain }}"
     serveralias: "www.smokefree.{{ drupal_domain }}"
-   ## documentroot: "{{ drupal_core_path }}/smokefree"
     documentroot: "{{drupal_project_setup_dir}}/smokefree/smokefree"
     extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
 
