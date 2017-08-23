@@ -8,8 +8,8 @@ arrows (->) are for information
 dashes (-) are for actions
 
 Required software:
-	-VirtualBox :: https://www.virtualbox.org/
-	-Vagrant	:: https://www.vagrantup.com/
+	VirtualBox :: https://www.virtualbox.org/
+	Vagrant    :: https://www.vagrantup.com/
 
 1. go to https://www.drupalvm.com/, download or clone the vm (I placed it in my home directory for easy access but it doesn't matter where you put it)
 	-for issues reference the quick start guide on this page
@@ -49,8 +49,8 @@ Required software:
 		https://www.drupalvm.dev
 
 9. mysql database import
-	# for the purpose of clarity we will assume we have a *.sql file called 'example_db.sql' and we want to put that into a database called 'example'
-	# you can replace 'example' with the name of your database 
+	for the purpose of clarity we will assume we have a *.sql file called 'example_db.sql' and we want to put that into a database called 'example'
+	you can replace 'example' with the name of your database 
 	
 	a. make sure you are tunneled into drupalvm via ssh
 		-if you are not, navigate to /drupalvm in terminal and run 'vagrant ssh'
@@ -69,14 +69,14 @@ Required software:
 		show databases;
 		use example;
 		show tables;
-	# now that your database has been added you can go to your site! (You configured this name when you set 'servername:' in /drupalvm/config.yml)
+	now that your database has been added you can go to your site! (You configured this name when you set 'servername:' in /drupalvm/config.yml)
 		open browser > https://example.drupalvm.dev
 	
 	
 ### known problems
-	# if you are using drupal 7 your database settings will live in ./sites/default/settings.php
+	if you are using drupal 7 your database settings will live in ./sites/default/settings.php
 		locate the variable that names your database. To find it quickly you can search for the following term :
 		'driver' => 'mysql'
 		-rename the database to 'example' -or whatever you actually called your database when you created/imported it
 		
-	# please include your own known problems as you come across them, and update the document accordingly.
+	please include your own known problems as you come across them, and update the document accordingly.
