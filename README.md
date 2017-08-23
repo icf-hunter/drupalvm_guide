@@ -7,13 +7,14 @@ DrupalVM steps
 arrows (->) are for information
 dashes (-) are for actions
 
+## Installation
 Required software:
 	VirtualBox :: https://www.virtualbox.org/
 	Vagrant    :: https://www.vagrantup.com/
 
 1. go to https://www.drupalvm.com/, download or clone the vm (I placed it in my home directory for easy access but it doesn't matter where you put it)
 	-for issues reference the quick start guide on this page
-
+## Setup
 2. copy the config.yml provided in this directory and paste it into the drupalvm directory you just created
 	->this file overrides settings in default.config.yml
 
@@ -24,19 +25,19 @@ Required software:
 	->this is where your projects will be placed
 	-you can now clone or pull a project into this directory with git bash
 	
-5. edit config.yml and find '## virtual hosts added for projects'
+5. edit config.yml and find "virtual hosts added for projects"
 	->there, you will find examples for drupal 8 (epamdu) and drupal 7 (smokefree) sites
 	-duplicate, modify, or remove these as needed for your own sites
 		->make sure that each documentroot property matches exactly with the a folder in your /drupalvm/projects directory
 		->and drill down until you find the index.php or index.html (otherwise you will get a 403 Forbidden error when you try to navigate to the site)
-	
+## Vagrant Commands
 6. navigate to /drupalvm and run the following command :
 	vagrant up
 	
 7. Be patient. You may have errors when building, if so just run the following command to restart from where you left off :
 	vagrant provision
 	->note run this command anytime you make a change to config.yml or VagrantFile
-	
+
 8. once vagrant is done building drupalvm you can ssh into the box with the following command :
 	vagrant ssh
 	->note if on windows you need to use git bash as your ssh client (and make sure your enviornment variables are properly set up for git bash)
@@ -48,7 +49,7 @@ Required software:
 	-or you can navigate to the blank drupal project you created in 'd8-sandbox'
 		https://www.drupalvm.dev
 
-9. mysql database import
+# mysql database import
 	for the purpose of clarity we will assume we have a *.sql file called 'example_db.sql' and we want to put that into a database called 'example'
 	you can replace 'example' with the name of your database 
 	
