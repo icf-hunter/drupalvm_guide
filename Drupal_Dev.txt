@@ -1,9 +1,0 @@
-Installation location
------------------------------------
-Stack location: C:\DevDesktop
-
-Port settings
------------------------------------
-Apache HTTP:       8083
-Apache HTTPS:      8443
-MySQL:             33067
