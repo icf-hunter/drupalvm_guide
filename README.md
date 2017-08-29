@@ -8,9 +8,10 @@ arrows (->) are for information
 dashes (-) are for actions
 
 ## Installation
-Required software:
-	VirtualBox :: https://www.virtualbox.org/
-	Vagrant    :: https://www.vagrantup.com/
+Required software:  
+VirtualBox :: https://www.virtualbox.org/  
+Vagrant    :: https://www.vagrantup.com/  
+Git bash   :: https://git-scm.com/downloads  
 
 1. go to https://www.drupalvm.com/, download or clone the vm (I placed it in my home directory for easy access but it doesn't matter where you put it)
 	-for issues reference the quick start guide on this page
