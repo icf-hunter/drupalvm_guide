@@ -9,12 +9,17 @@ dashes (-) are for actions
 
 ## Installation
 Required software:  
+Git bash   :: https://git-scm.com/downloads  
 VirtualBox :: https://www.virtualbox.org/  
 Vagrant    :: https://www.vagrantup.com/  
-Git bash   :: https://git-scm.com/downloads  
+  
+*make sure to reboot before after installing the software
+1. go to https://www.drupalvm.com/, download or clone the vm (I placed it in my home directory for easy access but it doesn't matter where you put it)  
+*windows home directory = 'C:/user/%userID%/'  
+*mac home directory = '/~'  
+*NOTE: make sure to name the root directory 'drupalvm' because that is what drupal_core_path is named  
+-for issues reference the quick start guide on this page  
 
-1. go to https://www.drupalvm.com/, download or clone the vm (I placed it in my home directory for easy access but it doesn't matter where you put it)
-	-for issues reference the quick start guide on this page
 ## Setup
 2. copy the config.yml provided in this directory and paste it into the drupalvm directory you just created
 	->this file overrides settings in default.config.yml
@@ -30,17 +35,19 @@ Git bash   :: https://git-scm.com/downloads
 	->there, you will find examples for drupal 8 (epamdu) and drupal 7 (smokefree) sites
 	-duplicate, modify, or remove these as needed for your own sites
 		->make sure that each documentroot property matches exactly with the a folder in your /drupalvm/projects directory
-		->and drill down until you find the index.php or index.html (otherwise you will get a 403 Forbidden error when you try to navigate to the site)
+		->and drill down until you find the index.php or index.html (otherwise you will get a 403 Forbidden error when you try to navigate to the site)  
+
 ## Vagrant Commands
-6. navigate to /drupalvm and run the following command :
-	vagrant up
+6. launch Git Bash AS ADMINISTRATOR (right click, run as admin), navigate to /drupalvm and run the following command :  
+	vagrant up  
+	*note: to navigate into a folder use the command 'cd folderName'. to move up a directory use 'cd ../'
 	
-7. Be patient. You may have errors when building, if so just run the following command to restart from where you left off :
-	vagrant provision
+7. Be patient. You may have errors when building, if so just run the following command to restart from where you left off :  
+	vagrant provision  
 	->note run this command anytime you make a change to config.yml or VagrantFile
 
-8. once vagrant is done building drupalvm you can ssh into the box with the following command :
-	vagrant ssh
+8. once vagrant is done building drupalvm you can ssh into the box with the following command :  
+	vagrant ssh  
 	->note if on windows you need to use git bash as your ssh client (and make sure your enviornment variables are properly set up for git bash)
 	
 ## quick check!
@@ -76,9 +83,9 @@ Git bash   :: https://git-scm.com/downloads
 	
 	
 ### known problems
-	if you are using drupal 7 your database settings will live in ./sites/default/settings.php
-		locate the variable that names your database. To find it quickly you can search for the following term :
-		'driver' => 'mysql'
-		-rename the database to 'example' -or whatever you actually called your database when you created/imported it
+	if you are using drupal 7 your database settings will live in ./sites/default/settings.php  
+		-locate the variable that names your database. To find it quickly you can search for the following term :
+			'driver' => 'mysql'  
+		-rename the database to 'example' -or whatever you actually called your database when you created/imported it  
 		
-	please include your own known problems as you come across them, and update the document accordingly.
+*please include your own known problems as you come across them, and update the document accordingly.
