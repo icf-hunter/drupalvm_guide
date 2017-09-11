@@ -21,22 +21,28 @@ Vagrant    :: https://www.vagrantup.com/
 -for issues reference the quick start guide on this page  
 
 ## Setup
-2. copy the config.yml provided in this directory and paste it into the drupalvm directory you just created
-	->this file overrides settings in default.config.yml
-
-3. create a directory called 'd8-sandbox' inside drupalvm
-	->this is where your drupal core setup will be saved
+2. copy the config.yml provided in this directory and paste it into the drupalvm directory you just created  
+	->this file overrides settings in default.config.yml  
+ 
+3. create a directory called 'd8-sandbox' inside drupalvm  
+	->this is where your drupal core setup will be saved  
 	
 4. create a directory called 'projects' inside drupalvm
-	->this is where your projects will be placed
-	-you can now clone or pull a project into this directory with git bash
+	->this is where your projects will be placed  
+	-you can now clone or pull a project into this directory with git bash  
 	
-5. edit config.yml and find "virtual hosts added for projects"
-	->there, you will find examples for drupal 8 (epamdu) and drupal 7 (smokefree) sites
-	-duplicate, modify, or remove these as needed for your own sites
-		->make sure that each documentroot property matches exactly with the a folder in your /drupalvm/projects directory
-		->and drill down until you find the index.php or index.html (otherwise you will get a 403 Forbidden error when you try to navigate to the site)  
+5. edit config.yml and find "virtual hosts added for projects"  
+	->there, you will find examples for drupal 8 (epamdu) and drupal 7 (smokefree) sites  
+	-duplicate, modify, or remove these as needed for your own sites  
+		->make sure that each documentroot property matches exactly with the a folder in your /drupalvm/projects directory  
+		->and drill down until you find the index.php or index.html (otherwise you will get a 403 Forbidden error when you try to navigate to the site)  
 
+6. to manually add drupal 7 core files (or any other version)   
+	-go to https://www.drupal.org/project/drupal/releases  
+	-choose your version (I'm doing this example for 7.x, at the moment it is 7.56)  
+	-download the zip and extract it inside /drupalvm  
+	-rename the extracted directory d7-sandbox  
+	
 ## Vagrant Commands
 6. launch Git Bash AS ADMINISTRATOR (right click, run as admin), navigate to /drupalvm and run the following command :  
 	vagrant up  
